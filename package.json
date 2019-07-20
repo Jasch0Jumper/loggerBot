@@ -1,0 +1,17 @@
+{
+  "name": "loggerbot",
+  "version": "1.0.0",
+  "description": "nsa is da",
+  "main": "index.js",
+  "scripts": {
+    "test": "cmdTest"
+  },
+  "author": "Jasch",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "discord.js-commando": "^0.10.0",
+    "fs": "0.0.1-security",
+    "request": "^2.88.0"
+  }
+}
