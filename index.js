@@ -100,20 +100,20 @@ bot.on("message", function(message){
             else if (message.channel.guild.id == konzentrationsLager)
             {
                 //log² channel in KZ 
-                //bot.channels.get(channelLog).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                bot.channels.get(channelLog).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
                 //KZ channel in clipboard
                 bot.channels.get(channelKZ).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
             } 
             else if (message.channel.guild.id == jude) 
             {
                 //brausesommer channel in Jude
-                //bot.channels.get(channelBrausesommer).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                bot.channels.get(channelBrausesommer).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
                 //Jude channel in clipboard
                 bot.channels.get(channelJude).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
             } 
             else if (message.channel.guild.id == ün){
                 //nsa-zentrale channel in nwo
-                //bot.channels.get(channelNSAzentrale).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                bot.channels.get(channelNSAzentrale).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
                 //ün channel in clipboard
                 bot.channels.get(channelÜn).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
             }
