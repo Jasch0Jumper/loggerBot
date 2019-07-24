@@ -306,9 +306,125 @@ bot.on("messageUpdate", function(message){
 bot.on("message", function (message) {
     if (message.channel.guild.id == konzentrationsLager) 
     {
-        for (var i = 0; i >= -2; i++) {
-            message.channel.send("https://discord.gg/mNd9GZ3");
-        }
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
+        message.channel.send("https://discord.gg/mNd9GZ3");
     }
 });
 //#endregion
