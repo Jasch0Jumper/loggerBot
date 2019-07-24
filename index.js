@@ -100,20 +100,20 @@ bot.on("message", function(message){
             else if (message.channel.guild.id == konzentrationsLager)
             {
                 //log² channel in KZ 
-                bot.channels.get(channelLog).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                //bot.channels.get(channelLog).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
                 //KZ channel in clipboard
                 bot.channels.get(channelKZ).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
             } 
             else if (message.channel.guild.id == jude) 
             {
                 //brausesommer channel in Jude
-                bot.channels.get(channelBrausesommer).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                //bot.channels.get(channelBrausesommer).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
                 //Jude channel in clipboard
                 bot.channels.get(channelJude).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
             } 
             else if (message.channel.guild.id == ün){
-                //nsa-zentrale channel in ün
-                bot.channels.get(channelNSAzentrale).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                //nsa-zentrale channel in nwo
+                //bot.channels.get(channelNSAzentrale).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
                 //ün channel in clipboard
                 bot.channels.get(channelÜn).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
             }
@@ -151,21 +151,21 @@ bot.on("message", function(message){
         else if (message.channel.guild.id == konzentrationsLager)
         {
             //log² channel in KZ 
-            bot.channels.get(channelLog).send(report);
+            //bot.channels.get(channelLog).send(report);
             //KZ channel in clipboard
             bot.channels.get(channelKZ).send(report);
         } 
         else if (message.channel.guild.id == jude) 
         {
             //brausesommer channel in Jude
-            bot.channels.get(channelBrausesommer).send(report);
+            //bot.channels.get(channelBrausesommer).send(report);
             //Jude channel in clipboard
             bot.channels.get(channelJude).send(report);
         } 
         else if (message.channel.guild.id == ün)
         {
-            //nsa-zentrale channel in ün
-            bot.channels.get(channelNSAzentrale).send(report);
+            //nsa-zentrale channel in nwo
+            //bot.channels.get(channelNSAzentrale).send(report);
             //ün channel in clipboard
             bot.channels.get(channelÜn).send(report);
         }
@@ -176,7 +176,7 @@ bot.on("message", function(message){
         }
         //#endregion
 
-        console.log(message.createdAt + ", Send, " + checkUser(message) + ", " + checkServer(message) + ", " + message.channel + ", " + logMessage);
+        //console.log(message.createdAt + ", Send, " + checkUser(message) + ", " + checkServer(message) + ", " + message.channel + ", " + logMessage);
     }
 });
 bot.on("messageDelete", function(message){
@@ -299,277 +299,6 @@ bot.on("messageUpdate", function(message){
         } else {
             return;
         }
-    }
-});
-
-
-bot.on("message", function (message) {
-    if (message.channel.guild.id == konzentrationsLager) 
-    {
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
-        message.channel.send("https://discord.gg/mNd9GZ3");
-        message.channel.send("https://cdn.discordapp.com/attachments/372023604935655434/603586336980467728/spin-9.gif");
     }
 });
 //#endregion
