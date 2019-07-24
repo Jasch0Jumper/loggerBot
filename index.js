@@ -21,7 +21,9 @@ var channelNSAzentrale = "598112254562664478";
 var channelJude = "592763266640379914";
 var channelBrausesommer = "597749605861556225";
 var channelKZ = "592763314614829056";
-var channelLog = "594573719859363840";
+//var channelLog = "594573719859363840";
+// temp delete later
+var channelLog = "603581496619433984";
 var channelDev = "593890334732320810";
 var channelOthers = "594617895246495777";
 
