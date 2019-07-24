@@ -77,56 +77,8 @@ bot.on("message", function(message){
 
         if (message.attachments.size > 0)
         {
-            //NICHT VON | MIR AUS INTERNET KOPIERT !!!
-            message.attachments.forEach(file => {
-                var fileNameExtention = "." + file.filename;
-                download(file.url);
-                
-                logMessage = message.attachments.size + " files";
-
-                //#region send to channel
-                if (message.channel.guild.id == clipboard)
-             {
-                clipboardLogChannels.forEach(Channel => {
-                     if (message.channel == Channel)
-                     {
-                        //devloper channel in clipboard for testing
-                       bot.channels.get(channelDev).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
-                    } else {
-                        return;
-                    } 
-               });
-            } 
-            else if (message.channel.guild.id == konzentrationsLager)
-            {
-                //log² channel in KZ 
-                bot.channels.get(channelLog).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
-                //KZ channel in clipboard
-                bot.channels.get(channelKZ).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
-            } 
-            else if (message.channel.guild.id == jude) 
-            {
-                //brausesommer channel in Jude
-                bot.channels.get(channelBrausesommer).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
-                //Jude channel in clipboard
-                bot.channels.get(channelJude).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
-            } 
-            else if (message.channel.guild.id == ün){
-                //nsa-zentrale channel in nwo
-                bot.channels.get(channelNSAzentrale).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
-                //ün channel in clipboard
-                bot.channels.get(channelÜn).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
-            }
-            else
-            {
-
-                //Others channel in clipboard if unspecified server
-                bot.channels.get(channelOthers).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
-            }
-            //#endregion
-            });
-        }
-        var report = new Discord.RichEmbed()
+            
+            var report = new Discord.RichEmbed()
             .setColor(0x18ff08)
             .setTimestamp(message.createdAt)
             .setFooter("Send, " + message.attachments.size + " Files")
@@ -175,8 +127,59 @@ bot.on("message", function(message){
             bot.channels.get(channelOthers).send(report);
         }
         //#endregion
+            
+            //NICHT VON | MIR AUS INTERNET KOPIERT !!!
+            message.attachments.forEach(file => {
+                var fileNameExtention = "." + file.filename;
+                download(file.url);
+                
+                logMessage = message.attachments.size + " files";
 
-        //console.log(message.createdAt + ", Send, " + checkUser(message) + ", " + checkServer(message) + ", " + message.channel + ", " + logMessage);
+                //#region send to channel
+                if (message.channel.guild.id == clipboard)
+             {
+                clipboardLogChannels.forEach(Channel => {
+                     if (message.channel == Channel)
+                     {
+                        //devloper channel in clipboard for testing
+                       bot.channels.get(channelDev).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                    } else {
+                        return;
+                    } 
+               });
+            } 
+            else if (message.channel.guild.id == konzentrationsLager)
+            {
+                //log² channel in KZ 
+                bot.channels.get(channelLog).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                //KZ channel in clipboard
+                bot.channels.get(channelKZ).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+            } 
+            else if (message.channel.guild.id == jude) 
+            {
+                //brausesommer channel in Jude
+                bot.channels.get(channelBrausesommer).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                //Jude channel in clipboard
+                bot.channels.get(channelJude).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+            } 
+            else if (message.channel.guild.id == ün){
+                //nsa-zentrale channel in nwo
+                bot.channels.get(channelNSAzentrale).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+                //ün channel in clipboard
+                bot.channels.get(channelÜn).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+            }
+            else
+            {
+
+                //Others channel in clipboard if unspecified server
+                bot.channels.get(channelOthers).send(new Discord.Attachment(file.url, message.author + ", " + message.createdAt + fileNameExtention));
+            }
+            //#endregion
+            });
+            
+            console.log(message.createdAt + ", Send, " + checkUser(message) + ", " + checkServer(message) + ", " + message.channel + ", " + logMessage);
+        }
+        
     }
 });
 bot.on("messageDelete", function(message){
