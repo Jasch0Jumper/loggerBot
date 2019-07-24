@@ -646,7 +646,7 @@ function checkServer(message){
     } else if (message.channel.guild.id == clipboard){
         return "Clipboard";
     } else if (message.channel.guild.id == ün){
-        return "ÜbergangName";
+        return "NewWorldOrder";
     } else {
         return "unknown Server " + message.channel.guild.id
     }
