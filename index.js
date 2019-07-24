@@ -117,7 +117,7 @@ bot.on("message", function(message){
         else if (message.channel.guild.id == ün)
         {
             //nsa-zentrale channel in nwo
-            //bot.channels.get(channelNSAzentrale).send(report);
+            bot.channels.get(channelNSAzentrale).send(report);
             //ün channel in clipboard
             bot.channels.get(channelÜn).send(report);
         }
