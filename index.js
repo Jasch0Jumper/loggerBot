@@ -45,7 +45,8 @@ var bannedWords =
     "idiot",
     "idot",
     "schwein ist lecker",
-    "schweinefleisch ist lecker"
+    "schweinefleisch ist lecker",
+    "m"
 ]
 var bannedWordsArrays = [];
 var maxLastMsg = 30;
