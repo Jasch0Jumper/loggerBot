@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const request = require("request");
 const bot = new Discord.Client();
-//const loginToken = process.env.token;
-const loginToken = "NTkyNzU3MDE5MjkxNjgwNzcw.XRD-zw.1kpKv0pVO95_6lINJI7EW81NrPs";
+const loginToken = process.env.token;
+
 //#endregion
 
 //#region variablen
