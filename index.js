@@ -3,8 +3,8 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const request = require("request");
 const bot = new Discord.Client();
-const loginToken = process.env.token;
-
+//const loginToken = process.env.token;
+const loginToken = "NTkyNzU3MDE5MjkxNjgwNzcw.XRD-zw.1kpKv0pVO95_6lINJI7EW81NrPs";
 //#endregion
 
 //#region variablen
@@ -40,6 +40,8 @@ var clipboardDev = "<#593890334732320810>";
 var clipboardOthers = "<#594617895246495777>";
 var clipboardLogChannels = [botPlayground, clipboardJude, clipboardNwo, clipboardDev, clipboardOthers];
 //#endregion
+
+var banned = false;
 
 var bannedWords = 
 [
@@ -171,7 +173,9 @@ bot.on("message", function(message)
 
         if (removeEmotes(message.content).toLocaleLowerCase().includes(bannedWords[i]))
         {
-            message.delete();
+            banned = true;
+            message.delete()
+
         }
     }
     
@@ -206,17 +210,36 @@ bot.on("messageDelete", function (message)
 {
     if (message.author.bot == false && message.channel.type != "dm")
     {
-        var report = new Discord.RichEmbed()
-        .setColor(0xb00e0e)
-        .setTimestamp(message.createdAt)
-        .setFooter("Delete, " + message.attachments.size + " Files")
-        .setAuthor(checkUser(message))
-        .setDescription(message.content)
-        .addField("Channel", message.channel)
-        .addField("Message ID", message.id);
+        if (banned)
+        {
+            var report = new Discord.RichEmbed()
+            .setColor(0x2c57e6)
+            .setTimestamp(message.createdAt)
+            .setFooter("Ban")
+            .setAuthor(checkUser(message))
+            .setDescription(message.content)
+            .addField("Channel", message.channel)
+            .addField("Message ID", message.id);
 
-        sendToChannels(message, report);
-        console.log(message.createdAt + ", Delete, " + checkUser(message) + ", " + checkServer(message) + ", " + message.channel);
+            sendToChannels(message, report);
+            console.log(message.createdAt + ", Ban, " + checkUser(message) + ", " + checkServer(message) + ", " + message.channel);
+
+            banned = false;
+        }
+        else
+        {
+            var report = new Discord.RichEmbed()
+            .setColor(0xb00e0e)
+            .setTimestamp(message.createdAt)
+            .setFooter("Delete, " + message.attachments.size + " Files")
+            .setAuthor(checkUser(message))
+            .setDescription(message.content)
+            .addField("Channel", message.channel)
+            .addField("Message ID", message.id);
+    
+            sendToChannels(message, report);
+            console.log(message.createdAt + ", Delete, " + checkUser(message) + ", " + checkServer(message) + ", " + message.channel);
+        }
     }
 });
 bot.on("messageUpdate", function(message){
@@ -334,15 +357,15 @@ function removeEmotes(input)
     if (checkEmotes(input))
     {
         var output = "";
-        var splitInput = input.split(" ");
-        console.log("1: " + splitInput);
+        var splitInput = input.split(":");
     
         emotes.forEach(emote => {
-            splitInput.splice(splitInput.indexOf(emote), 1);
+            if (splitInput.includes(emote))
+            {
+                splitInput.splice(splitInput.indexOf(emote), 1);
+            }
         });
-        console.log("2: " + splitInput);
         output = splitInput.join(" ");
-        console.log("start " + output + " end");
         return output;
     } 
     else
