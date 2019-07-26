@@ -44,9 +44,72 @@ var clipboardLogChannels = [botPlayground, clipboardJude, clipboardNwo, clipboar
 var bannedWords = 
 [
     "idiot",
+    "idioot",
+    "i d i o o t",
+    "i d i o t",
     "idot",
+    "i d o t",
     "schwein ist lecker",
-    "schweinefleisch ist lecker"
+    " s c h w e i n i s t l e c k e r",
+    "schweinefleisch ist lecker",
+    "s c h w e i n e f l e i s c h i s t l e c k e r",
+    "m",
+    "Ⓜ",
+    "🇲",
+    "arian",
+    "a r i a n",
+    "The restoopid one"
+]
+var emotes = 
+[
+    "emotesTest",
+    "testEmote",
+
+    "fakenewsbig",
+    "Angela",
+    "AngelaBurka",
+    "AngelaTechno",
+    "Angela2",
+    "Angela3",
+    "Angela4",
+    "AngelaDontKnow",
+    "Angela5",
+    "Angela6",
+    "Angela8",
+    "Angela9",
+    "AngelaDu",
+    "AngelaDepress",
+    "fakenewssmall",
+    "3DAngela",
+    "donald",
+    "donaldwow",
+    "putingangstar",
+    "donald23",
+    "donald13",
+    "donald3",
+    "kimilein",
+    "erdo4",
+    "erdo3",
+    "erdo2",
+    "erdo1",
+    "HAMI3",
+    "HAMI2",
+    "HAMI1",
+    "rip",
+    "selbstmord",
+    "strichMannAmHandy",
+    "arianBennenDie",
+    "images",
+    "neuland",
+    "hitlerFerninist",
+    "fuckyou",
+    "marley",
+    "mariobose",
+    "eulewow",
+    "eulefliegend",
+    "putintraurig",
+    "eule",
+    "trollface"
 ]
 var bannedWordsArrays = [];
 var maxLastMsg = 30;
@@ -104,7 +167,9 @@ bot.on("message", function(message)
 
     for (var i = 0; i < bannedWords.length; i++)
     {
-        if (message.content.toLocaleLowerCase().includes(bannedWords[i]))
+        removeEmotes(message.content);
+
+        if (removeEmotes(message.content).toLocaleLowerCase().includes(bannedWords[i]))
         {
             message.delete();
         }
@@ -264,6 +329,39 @@ function createArrays()
         bannedWordsArrays.push(createdArray);
     });
 }
+function removeEmotes(input)
+{
+    if (checkEmotes(input))
+    {
+        var output = "";
+        var splitInput = input.split(" ");
+        console.log("1: " + splitInput);
+    
+        emotes.forEach(emote => {
+            splitInput.splice(splitInput.indexOf(emote), 1);
+        });
+        console.log("2: " + splitInput);
+        output = splitInput.join(" ");
+        console.log("start " + output + " end");
+        return output;
+    } 
+    else
+    {
+        return input;
+    } 
+}
+function checkEmotes(input)
+{
+    output = false;
+    emotes.forEach(emote => {
+        if (input.includes(emote))
+        {
+            output = true;
+        }
+    });
+    return output;
+}
+
 //NICHT VON | MIR AUS INTERNET KOPIERT !!!
 function download(url)
 {
