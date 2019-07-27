@@ -254,7 +254,7 @@ bot.on("messageUpdate", function(message){
                 {
                     var report = new Discord.RichEmbed()
                     .setColor(0xfcf400)
-                    .setTimestamp(message.editedTimestamp)
+                    .setTimestamp(message.createdAt)
                     .setFooter("Edit, " + message.attachments.size + " Files")
                     .setAuthor(checkUser(message))
                     .setDescription(message.channel)
