@@ -54,8 +54,6 @@ var bannedWords =
     " s c h w e i n i s t l e c k e r",
     "schweinefleisch ist lecker",
     "s c h w e i n e f l e i s c h i s t l e c k e r",
-    "arian",
-    "a r i a n",
     "The restoopid one"
 ]
 var emotes = 
