@@ -178,8 +178,6 @@ bot.on("message", function(message)
                 message.delete();
             }
         }
-        
-        console.log(message.content);
     }
     
     //#region banned words old stuff remove
