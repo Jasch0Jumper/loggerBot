@@ -26,9 +26,15 @@ var arian = "360443752323612673";
 var arianpc = "499585513976496139";
 var calvin = "319546580065583106";
 var jasch = "265150849502806019";
+var jaschpc = "607668072253227085";
 var marley = "434335796422508554";
 var peter = "426693694922424320";
 var sorosh = "480013607220805645";
+var robin = "500042366808227851";
+var nico = "550296556763611166";
+//var zoran = "";
+//var tom = "";
+//var karl = "";
 
 //channelsIDclipboard
 var botPlayground = "<#495499899375321088>";
@@ -46,6 +52,10 @@ var bannedWords =
 [
     "idiot",
     "idioot",
+    "idi ot",
+    "id iot",
+    "i diot",
+    "idio t",
     "i d i o o t",
     "i d i o t",
     "idot",
@@ -54,8 +64,14 @@ var bannedWords =
     " s c h w e i n i s t l e c k e r",
     "schweinefleisch ist lecker",
     "s c h w e i n e f l e i s c h i s t l e c k e r",
-    "The restoopid one"
+    "the restoopid one",
+    //emotes
+    "👨‍❤️",
+    "💩"
+     
 ]
+//#region emotes var
+/* 
 var emotes = 
 [
     "emotesTest",
@@ -106,23 +122,25 @@ var emotes =
     "putintraurig",
     "eule",
     "trollface"
-]
-var bannedWordsArrays = [];
-var maxLastMsg = 30;
-var lastMessages = [];
-var lastMessagesMessages = [];
-
+] */
 //#endregion
 
+var bannedWordsArrays = [];
+//var maxLastMsg = 30;
+//var lastMessages = [];
+//var lastMessagesMessages = [];
+
+//#endregion
 
 //#region bot.on();
 bot.on("message", function(message)
 {
-    //#region log image
+    
     if (message.author.bot == false && message.channel.type != "dm")
     {
         var logMessage = "no files";
 
+        //#region log image
         if (message.attachments.size > 0)
         {
             var report = new Discord.RichEmbed()
@@ -148,11 +166,24 @@ bot.on("message", function(message)
             
             console.log(message.createdAt + ", Send, " + checkUser(message) + ", " + checkServer(message) + ", " + message.channel + ", " + logMessage);
         } 
+        //#endregion
+
+        for (var i = 0; i < bannedWords.length; i++)
+        {
+            //removeEmotes(message.content);
+    
+            if (message.content.toLocaleLowerCase().includes(bannedWords[i])) //removeEmotes()
+            {
+                banned = true;
+                message.delete();
+            }
+        }
+        
+        console.log(message.content);
     }
-    //#endregion
-
-    //#region banned words
-
+    
+    //#region banned words old stuff remove
+/*
     if (lastMessages.length > maxLastMsg)
     {
         lastMessages.splice(0, 1);
@@ -160,43 +191,8 @@ bot.on("message", function(message)
     }
     lastMessages.push(message.content.toLocaleLowerCase());
     lastMessagesMessages.push(message);
-
-    for (var i = 0; i < bannedWords.length; i++)
-    {
-        removeEmotes(message.content);
-
-        if (removeEmotes(message.content).toLocaleLowerCase().includes(bannedWords[i]))
-        {
-            banned = true;
-            message.delete()
-
-        }
-    }
-    
-    /*
-    for (var i = 0; i < bannedWordsArrays.length; i++)
-    {
-        var k = 0;
-        var matchesId = [];
-        for (var j = 0; i < lastMessages.length; j++)
-        {
-            console.log("lastMsg = " + lastMessages[j]);
-            console.log("banned = " + bannedWordsArrays[i][k]);
-
-            if (lastMessages[i] == bannedWordsArrays[i][k])
-            {
-                matchesId.push(i)
-                console.log("match " + lastMessages[i] + " " + bannedWords[i][k]);
-            }
-            else 
-            { return; }
-
-            k++;
-        }
-    }
-    */
-   
-
+*/
+     
     //#endregion
 
 });
@@ -217,6 +213,8 @@ bot.on("messageDelete", function (message)
 
             sendToChannels(message, report);
             console.log(message.createdAt + ", Ban, " + checkUser(message) + ", " + checkServer(message) + ", " + message.channel);
+
+            message.author.send("```Your message was removed because what you tried to say contains illegal content. Further violations of the rules may lead to you losing your rank or other punishments.```" + message.createdAt);
 
             banned = false;
         }
@@ -282,14 +280,26 @@ function checkUser(message)
         return "Calvin";
     } else if (message.author.id == jasch) {
         return "Jasch";
+    } else if (message.author.id == jaschpc) {
+        return "Jasch PC";
     } else if (message.author.id == marley) {
         return "Marley";
     } else if (message.author.id == peter) {
         return "Peter";
     } else if (message.author.id == sorosh) {
         return "Sorosh";
+    } else if (message.author.id == robin) {
+        return "Robin";
+    } else if (message.author.id == nico) {
+        return "Nico";
+    } else if (message.author.id == zoran) {
+        return "Zoran";
+    } else if (message.author.id == karl) {
+        return "Karl";
+    } else if (message.author.id == tom) {
+        return "Tom";
     } else {
-        return "unknown User" + message.author + " (" + message.author.username + ")";
+        return "unknown User " + message.author + " (" + message.author.username + ")";
     }
 }
 function checkServer(message)
@@ -346,6 +356,8 @@ function createArrays()
         bannedWordsArrays.push(createdArray);
     });
 }
+//#region old stuff remove
+/*
 function removeEmotes(input)
 {
     if (checkEmotes(input))
@@ -378,6 +390,8 @@ function checkEmotes(input)
     });
     return output;
 }
+*/
+//#endregion
 
 //NICHT VON | MIR AUS INTERNET KOPIERT !!!
 function download(url)
