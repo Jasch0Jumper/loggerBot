@@ -50,6 +50,13 @@ var banned = false;
 
 var bannedWords = 
 [
+    "hasch",
+    "h asch",
+    "ha sch",
+    "has ch",
+    "hasc h",
+    "hash",
+    "h a s c h",
     "idiot",
     "idioot",
     "idi ot",
