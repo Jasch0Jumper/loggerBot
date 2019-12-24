@@ -48,6 +48,7 @@ var clipboardLogChannels = [botPlayground, clipboardJude, clipboardNwo, clipboar
 
 var banned = false;
 
+/*
 var bannedWords = 
 [
     "hasch",
@@ -77,6 +78,7 @@ var bannedWords =
     "💩"
      
 ]
+*/
 //#region emotes var
 /* 
 var emotes = 
