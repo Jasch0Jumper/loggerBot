@@ -20,7 +20,7 @@ var jude = "360445141439479818";
 bot.on("message", function(message)
 {
     if (IsBotOrDm(message)) { return; }
-    if (IsEmptyAndHasNoFiles(message)) { return; }
+    if (HasNoFiles(message)) { return; }
     
     var logMessage = "no files";
 
@@ -39,13 +39,13 @@ bot.on("message", function(message)
 bot.on("messageDelete", function (message)
 {
     if (IsBotOrDm(message)) { return; }
-    if (IsEmptyAndHasNoFiles(message)) { return; }
+    if (IsEmpty(message) && HasNoFiles(message)) { return; }
    
     ReportMessage(message, "Delete", 0xb00e0e, message.content, "");
 });
 bot.on("messageUpdate", function(message){
     if (IsBotOrDm(message)) { return; }
-    if (IsEmptyAndHasNoFiles(message)) { return; }
+    if (IsEmpty(message)) { return; }
 
     message.channel.fetchMessage(message.id).then(msg => {
     var editedMessage = msg.content
@@ -73,8 +73,11 @@ function ReportMessage(message, typeOfReport, color, description, logMessage) {
 function IsBotOrDm(message) {
     return message.author.bot != false || message.channel.type == "dm";
 }
-function IsEmptyAndHasNoFiles(message) {
-    return message.content == "" && message.attachments.size < 1;
+function IsEmpty(message) {
+    return message.content == "";
+}
+function HasNoFiles(message) {
+    return message.attachments.size < 1;
 }
 
 function getAuthorUsername(message) {
